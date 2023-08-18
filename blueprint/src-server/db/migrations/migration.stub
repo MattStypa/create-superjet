@@ -1,0 +1,10 @@
+async function up(db) {
+
+}
+
+async function down(db) {
+
+}
+
+exports.up = up;
+exports.down = down;

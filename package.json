@@ -1,0 +1,17 @@
+{
+  "name": "create-superjet",
+  "version": "0.1.0",
+  "author": {
+    "name": "Matt Stypa",
+    "email": "matt@mattstypa.com",
+    "url": "https://mattstypa.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MattStypa/create-superjet"
+  },
+  "bin": {
+    "create-superjet": "create.js"
+  }
+}

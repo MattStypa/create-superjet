@@ -1,0 +1,35 @@
+{
+  "name": "superjet-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently -c auto npm:app.dev npm:server.dev",
+    "lint": "eslint ./src-app ./src-server --ext .vue,.js,.jsx,.cjs,.mjs",
+    "app.dev": "vite",
+    "app.build": "vite build",
+    "server.dev": "nodemon --watch ./src-server --exec \"node ./src-server/server.js --dev\"",
+    "server.prod": "node ./src-server/server.js",
+    "migration": "node ./src-server/db/migrate.js latest",
+    "migration.new": "node ./src-server/db/migrate.js new",
+    "migration.rollback": "node ./src-server/db/migrate.js rollback",
+    "migration.reset": "node ./src-server/db/migrate.js reset",
+    "migration.up": "node ./src-server/db/migrate.js up",
+    "migration.down": "node ./src-server/db/migrate.js down",
+    "migration.status": "node ./src-server/db/migrate.js status"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "normalize.css": "^8.0.1",
+    "superjet": "^0.13.2",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.47.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "nodemon": "^3.0.1",
+    "sqlite3": "^5.1.6",
+    "vite": "^4.4.9"
+  }
+}
