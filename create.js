@@ -26,7 +26,7 @@ async function spawn(cmd, ...args) {
       if (code === 0) {
         resolve()
       } else {
-        reject();
+        reject(new Error('Command failed'));
       }
     });
   });
@@ -49,7 +49,7 @@ async function pathExists(path) {
 async function main() {
   const projectPath = await prompt('Project path: ');
   const destPath = nodePath.resolve(projectPath);
-  const srcPath = nodePath.relative(__dirname, 'blueprint');
+  const srcPath = nodePath.resolve(__dirname, 'blueprint');
 
   console.log('');
 
