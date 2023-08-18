@@ -57,8 +57,8 @@ async function main() {
 
   console.log('Copying files...');
   await spawn('cp', '-r', srcPath, destPath);
-
   process.chdir(destPath);
+  await spawn('mv', '.gitignore.stub', '.gitignore');
 
   console.log('Installing dependencies...');
   await spawn('npm', 'install');

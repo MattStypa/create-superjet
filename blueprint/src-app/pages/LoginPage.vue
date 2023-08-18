@@ -24,9 +24,3 @@
     await superjet.auth.login('test');
   };
 </script>
-
-<style scoped>
-  button {
-    width: 100%;
-  }
-</style>
