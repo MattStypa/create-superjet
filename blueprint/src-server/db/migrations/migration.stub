@@ -1,3 +1,6 @@
+// Superjet uses Knex.js to manage migrations.
+// See https://knexjs.org/
+
 async function up(db) {
 
 }
