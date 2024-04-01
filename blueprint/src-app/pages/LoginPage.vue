@@ -21,6 +21,10 @@
      * The development login should never be used in production.
      * Once configured, 'google' and 'facebook' providers can be used.
      */
-    await superjet.auth.login('test');
+    const username = prompt('username');
+
+    if (username !== null) {
+      await superjet.auth.login('test', { id: username });
+    }
   };
 </script>

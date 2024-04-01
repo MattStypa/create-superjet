@@ -2,6 +2,7 @@
   "name": "superjet-app",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "concurrently -c auto npm:app.dev npm:server.dev",
     "lint": "eslint ./src-app ./src-server --ext .vue,.js,.jsx,.cjs,.mjs",
@@ -20,7 +21,7 @@
   "dependencies": {
     "concurrently": "^8.2.2",
     "normalize.css": "^8.0.1",
-    "superjet": "^0.14.0",
+    "superjet": "^1.0.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
